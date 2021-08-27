@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Style Tranfer</h1>
+    <p>Submit the content image and style image and then press submit</p>
+    <p>You can see the example below. Let's try by yourself and have fun!!!</p>
+    <img src="/media/example.png" style="max-height:300px">
+    <br>
+    {% if img_url %}
+        <img src="{{ img_url}}" style="max-height:300px">
+    {% else %}
+        <textarea rows="20" cols="50"> </textarea>  
+    {% endif %}
+
+    {% if style_url %}
+        <img src="{{ style_url}}" style="max-height:300px">
+    {% else %}
+        <textarea rows="20" cols="50"> </textarea>  
+    {% endif %}
+    {% if generated_url %}
+        <img src="{{ generated_url}}" style="max-height:300px">
+    {% else %}
+        <textarea rows="20" cols="50"> </textarea>  
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    
+
+  </body>
+</html>
