@@ -174,8 +174,6 @@ traitlets==5.0.5
 Twisted==20.3.0
 txaio==20.4.1
 typing-extensions==3.7.4.3
-ubuntu-advantage-tools==27.2
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.26.6
