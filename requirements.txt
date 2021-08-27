@@ -174,8 +174,6 @@ traitlets==5.0.5
 Twisted==20.3.0
 txaio==20.4.1
 typing-extensions==3.7.4.3
-ufw==0.36
-unattended-upgrades==0.1
 urllib3==1.26.6
 usb-creator==0.3.7
 virtualenv==20.4.2
@@ -185,5 +183,3 @@ webencodings==0.5.1
 Werkzeug==2.0.1
 whitenoise==5.3.0
 wrapt==1.12.1
-xkit==0.0.0
-zope.interface==5.2.0
