@@ -5,12 +5,9 @@ django-crispy-forms==1.10.0
 django-on-heroku==1.1.2
 django-phone-field==1.8.1
 Flask==1.1.2
-flatbuffers==1.12
-future==0.18.2
 google-auth==1.35.0
 google-auth-oauthlib==0.4.5
 google-pasta==0.2.0
-grpcio==1.39.0
 gunicorn==20.1.0
 h5py==3.1.0
 imageio==2.9.0
@@ -18,8 +15,6 @@ incremental==17.5.0
 ipykernel==5.5.0
 ipython==7.20.0
 ipython-genutils==0.2.0
-isort==5.6.4
-jedi==0.18.0
 json5==0.9.5
 jsonschema==3.2.0
 jupyter-client==6.1.11
@@ -42,7 +37,6 @@ tensorflow==2.6.0
 tensorflow-estimator==2.6.0
 tensorflow-hub==0.12.0
 
-urllib3==1.26.6
 asgiref==3.3.4
 django-heroku==0.3.1
 gunicorn==20.1.0
