@@ -1,1 +1,1 @@
-web: gunicorn StyeTransfer.wsgi
+web: gunicorn StyleTransfer.wsgi --log-file -
