@@ -2,8 +2,8 @@ import tensorflow as tf
 import tensorflow_hub as hub
 
 import matplotlib.pyplot as plt
-import fast_helper
-from fast_helper import *
+# import fast_helper
+from .fast_helper import *
 from datetime import datetime
 
 def transfer(content_path = 'myapp/media/dog1.jpg', style_path = 'myapp/media/style.jpg'):

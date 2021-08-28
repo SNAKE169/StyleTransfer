@@ -3,8 +3,7 @@ from django.http import HttpResponse
 from .forms import StyleTransferForm
 from .models import StyleTransferModel
 
-import sys
-from StyleTransfer.fast_transfer import transfer
+from .StyleTransferModels.fast_transfer import transfer
 
 def index(request):
     context = {}
