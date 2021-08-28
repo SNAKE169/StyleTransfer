@@ -4,7 +4,7 @@ from .forms import StyleTransferForm
 from .models import StyleTransferModel
 
 import sys
-from StyleTransfer.fast_helper import transfer
+from StyleTransfer.fast_transfer import transfer
 
 def index(request):
     context = {}
