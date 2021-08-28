@@ -1,1 +1,1 @@
-web: gunicorn StyeTransfer.wsgi
+web: gunicorn --threads 8 StyeTransfer.wsgi --log-file -
