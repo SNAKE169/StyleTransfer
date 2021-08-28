@@ -1,1 +1,3 @@
-web: gunicorn --threads 8 StyeTransfer.wsgi --log-file -
+web: gunicorn StyeTransfer.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
