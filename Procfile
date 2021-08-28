@@ -1,1 +1,1 @@
-web: gunicorn StyeTransfer.wsgi --log-file -
+web: gunicorn StyeTransfer.wsgi
