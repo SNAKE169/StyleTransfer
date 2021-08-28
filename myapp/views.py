@@ -4,8 +4,7 @@ from .forms import StyleTransferForm
 from .models import StyleTransferModel
 
 import sys
-sys.path.insert(1,'myapp/StyleTransfer')
-from fast_transfer import transfer
+from StyleTransfer.fast_helper import transfer
 
 def index(request):
     context = {}
