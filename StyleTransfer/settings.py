@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-_i$hl)al#8_+tgq$ems-8xga&lby22!!1g(&alh58p5y%ze&^c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*.ngrok.io','*']
+ALLOWED_HOSTS = ['*.ngrok.io','*','https://styletransferanh.herokuapp.com/']
 
 
 # Application definition
