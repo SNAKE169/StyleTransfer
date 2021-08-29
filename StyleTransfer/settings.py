@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
-    'cloudinary_storage',
-    'cloudinary',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -130,12 +129,24 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'myapp/media/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME':'hdqwzvuhp',
-    'API_KEY' : '661979467525411',
-    'API_SECRET': '0ycFKZTEvRRZ1flWeyecOg0dnLM',
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'myapp/static'),
+]
+
+AWS_ACCESS_KEY_ID = 'AKIA5CZFOSPDGANMURPD'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'teststyletransfer'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
 }
 
+AWS_LOCATION = 'static'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+
+DEFAULT_FILE_STORAGE = 'StyleTransfer.storage_backends.MediaStorage'
+
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-DEFAULT_AUTO_FIELD = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 django_heroku.settings(locals())
