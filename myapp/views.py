@@ -12,9 +12,10 @@ def index(request):
         if form.is_valid():
             img = form.cleaned_data.get("image")
             style = form.cleaned_data.get("style")
+            print('Checking ....')
             obj = StyleTransferModel.objects.create(img=img, style=style)
-
             obj.save()
+            print('Checking...')
             img_url = obj.img.url
             style_url = obj.style.url
             generated_url = str(transfer(img_url, style_url))[5:]
